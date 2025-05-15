@@ -11,7 +11,7 @@ def main():
     # Check if the proper number of args are present
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
-        return 1
+        sys.exit(1)
     
     book_path = sys.argv[1]
 
@@ -21,7 +21,7 @@ def main():
     sorted_letter_dict = sort_dict(frankenstein_letter_dict)
 
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {book_path}")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
